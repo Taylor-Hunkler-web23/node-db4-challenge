@@ -48,7 +48,7 @@ exports.up = function(knex) {
     .onDelete("RESTRICT")
     .onUpdate("CASCADE")
 
-    tbl.float("quanity").notNullable()
+    tbl.float("quantity").notNullable()
    
 })
 };
