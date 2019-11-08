@@ -10,3 +10,7 @@ module.exports ={
 function getRecipes () {
     return db("recipes")
 }
+
+function getRecipes () {
+    return db("recipes").select('name', 'instructions')
+}

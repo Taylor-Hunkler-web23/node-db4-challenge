@@ -15,4 +15,14 @@ router.get('/', (req, res) => {
     });
   });
 
+
+  router.get('/', (req, res) => {
+    recipes.getRecipes()
+    .then(recipes => {
+      res.json(recipes);
+    })
+    .catch(err => {
+      res.status(500).json({ message: 'Failed to get recipe' });
+    });
+  });
 module.exports = router;
